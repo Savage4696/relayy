@@ -1,0 +1,20 @@
+{
+  "name": "relayy-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RELAY - Persistent work-context layer that follows a user's work across Slack and the browser",
+  "scripts": {
+    "setup": "npm run setup:server && npm run setup:web && npm run setup:extension",
+    "setup:server": "cd apps/server && npm install",
+    "setup:web": "cd apps/web && npm install",
+    "setup:extension": "cd apps/extension && npm install",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:web\"",
+    "dev:server": "cd apps/server && npm run dev",
+    "dev:web": "cd apps/web && npm run dev",
+    "build": "cd apps/server && npm run build && cd ../web && npm run build && cd ../extension && npm run build",
+    "test": "cd apps/server && npm test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

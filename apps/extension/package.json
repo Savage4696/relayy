@@ -1,0 +1,16 @@
+{
+  "name": "@relay/extension",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "@types/node": "^20.14.9",
+    "typescript": "^5.4.5",
+    "vite": "^5.3.1"
+  }
+}
